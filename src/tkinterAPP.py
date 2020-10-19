@@ -106,6 +106,7 @@ class Controller():
     def say_word(self, event):
         if self.word is not None:
             _say("Write this word")
+            print(self.word.question.split("_")[0])
             self.app.play(self.word.question)
             time.sleep(2)
             self.app.play(self.word.question)
